@@ -1,2 +1,8 @@
-FROM nginx
-COPY index.html /usr/share/nginx/htmld
+FROM openjdk
+WORKDIR /app
+
+COPY test.java /app
+
+RUN javac test.java # Compile
+
+CMD java test
