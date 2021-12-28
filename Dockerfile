@@ -1,8 +1,9 @@
 FROM openjdk
-WORKDIR /app
 
-COPY test.java /app
+WORKDIR /test
 
-RUN javac test.java # Compile
+COPY maha.java /test
 
-CMD java test
+RUN javac maha.java
+
+CMD java maha
